@@ -8,11 +8,11 @@ services:
         NODE_ENV: development
     environment:
       PORT: 3000
-      POSTGRES_HOST: postgres
-      POSTGRES_PORT: 5432
-      POSTGRES_DB: taskmanagement
-      POSTGRES_USER: app_user
-      POSTGRES_PASSWORD: password
+      RDS_HOSTNAME: postgres
+      RDS_PORT: 5432
+      RDS_DB_NAME: taskmanagement
+      RDS_USERNAME: app_user
+      RDS_PASSWORD: password
     ports:
       - 3000:3000
     depends_on:
