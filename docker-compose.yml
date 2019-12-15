@@ -4,15 +4,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      args:
-        NODE_ENV: development
     environment:
+      NODE_ENV: development
       PORT: 3000
-      RDS_HOSTNAME: postgres
-      RDS_PORT: 5432
-      RDS_DB_NAME: taskmanagement
-      RDS_USERNAME: app_user
-      RDS_PASSWORD: password
     ports:
       - 3000:3000
     depends_on:
@@ -28,7 +22,7 @@ services:
     restart: always
     environment:
       POSTGRES_USER: app_user
-      POSTGRES_PASSWORD: password
+      POSTGRES_PASSWORD: app_password
       POSTGRES_DB: taskmanagement
 
   pgadmin:
