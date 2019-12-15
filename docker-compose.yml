@@ -15,7 +15,7 @@ services:
       - postgres:postgres
     volumes:
       - ./src:/usr/src/app/src
-    command: npm run start:dev
+    command: npm run test:watch
 
   postgres:
     image: postgres:11.5-alpine
